@@ -13,8 +13,9 @@ plot(density(x2))
 plot(ecdf(x2))
 
 # tomar muestras de la poblacion
-s <- rep(0,500)
-for(i in 1:500) {
+#se modifica para tomar una muestra mas grande
+s <- rep(0,1000)
+for(i in 1:1000) {
   s[i] <- mean(sample(x2, 100))
 }
 
@@ -22,6 +23,7 @@ plot(density(s))
 
 # regresión, modelo
 # instalar paquete MASS (install.packages("MASS"))
+#paquete ya instalado
 library(MASS)
 rm(list=ls())
 
